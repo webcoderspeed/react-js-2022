@@ -12,6 +12,22 @@
 
 > It is also used in the creation of React Native, a framework for building mobile apps with React.
 
+> React uses Virtual DOM to efficiently update and render a UI.
+
+
+### Virtual DOM
+
+> Virtual DOM is a tree data structure that represents the UI as a set of nodes.
+
+> The tree is diffed against the previous tree to determine which nodes need to be updated and which nodes need to be removed.
+
+
+<center style="margin: 2rem 0">
+  <img src='./virtual_dom.png' alt='' />
+</center>
+
+
+
 ### Single Page Application [SPA]
 
 > A single-page application (SPA) is a web application that contains a single web page.
