@@ -4,7 +4,7 @@ import BlogList from './components/BlogList/BlogList'
 
 const App = () => {
   return (
-    <div>
+    <div className='app-container'>
       <Navbar />
       <BlogList />
     </div>

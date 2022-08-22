@@ -1,22 +1,19 @@
 import React from 'react';
+import styles from './Navbar.module.css'
 
 const Navbar = () => {
   return (
     <nav>
-     <div>
+      <h1 className={styles.logo}>
       My Blog
-     </div>
+     </h1>
 
-     <div>  
-        <a href="/" style={
-          {
-            marginRight: "1rem"
-          }
-        }>
+     <div className={styles.nav_links}>  
+        <a href="/">
           Home
         </a>
         <a href="/create-blog">
-          Create Blog
+          Create
         </a>
      </div>
     </nav>

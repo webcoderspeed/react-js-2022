@@ -1,8 +1,9 @@
 import React from 'react'
+import './BlogList.css'
 
 const BlogList = () => {
   return (
-    <div>BlogList</div>
+    <div className='blog-list'>BlogList</div>
   )
 }
 
