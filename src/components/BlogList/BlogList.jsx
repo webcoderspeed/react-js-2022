@@ -1,10 +1,29 @@
-import React from 'react'
-import './BlogList.css'
+import React from 'react';
+import './BlogList.css';
 
 const BlogList = () => {
-  return (
-    <div className='blog-list'>BlogList</div>
-  )
-}
+  const handleClick = () => {
+    console.log('Clicked');
+  };
 
-export default BlogList
+  const handleDelete = ({
+    id, event
+  }) => {
+    console.log('blog deleted', id, event.target);
+  };
+
+  return (
+    <div className='blog-list'>
+      <button onClick={handleClick}>handle click</button>
+
+      <button onClick={(e) => handleDelete({
+        event:e, 
+        id: Math.random()
+      })}>
+        Delete this blog
+      </button>
+    </div>
+  );
+};
+
+export default BlogList;
