@@ -1,26 +1,25 @@
-import React from 'react';
-import './BlogList.css';
+import React, { useState} from 'react';
 
 const BlogList = () => {
-  const handleClick = () => {
-    console.log('Clicked');
-  };
 
-  const handleDelete = ({
-    id, event
-  }) => {
-    console.log('blog deleted', id, event.target);
+  const [name, setName] = useState('Sanjeev');
+  const [loading, setLoading] = useState(false);
+
+  const handleClick = () => {
+    // name = "King";
+    setLoading(true)
+    setTimeout(() => {
+      setName('King');
+      setLoading(false)
+    }, 3000)
   };
 
   return (
-    <div className='blog-list'>
-      <button onClick={handleClick}>handle click</button>
-
-      <button onClick={(e) => handleDelete({
-        event:e, 
-        id: Math.random()
-      })}>
-        Delete this blog
+    <div>
+      {name}
+      <button onClick={handleClick}>{
+        loading ? 'Converting into King...' : 'Make me a king'
+}
       </button>
     </div>
   );
