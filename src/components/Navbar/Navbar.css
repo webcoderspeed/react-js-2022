@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: hsla(200, 95%, 14%, 1);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.brand-logo,
+.nav-links {
+  color: hsla(137, 85%, 34%, 1);
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links:hover,
+.brand-logo:hover {
+  color: hsla(0, 0%, 77%, 1);
+}
+
+.nav-links:hover {
+  text-decoration: underline;
+}

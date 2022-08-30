@@ -1,0 +1,6 @@
+.home-container {
+  margin: 4rem auto;
+  max-width: 80rem;
+  display: grid;
+  gap:1rem;
+}

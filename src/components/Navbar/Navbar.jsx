@@ -1,24 +1,22 @@
+
 import React from 'react';
-import styles from './Navbar.module.css'
+import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav>
-      <h1 className={styles.logo}>
-      My Blog
-     </h1>
-
-     <div className={styles.nav_links}>  
-        <a href="/">
+    <header>
+      <h2 className='brand-logo'>My Blogs</h2>
+      <nav>
+        <a href='/' className='nav-links'>
           Home
         </a>
-        <a href="/create-blog">
-          Create
+        <a href='/create-blogs' className='nav-links'>
+          Create Blog
         </a>
-     </div>
-    </nav>
-  )
-}
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;
 

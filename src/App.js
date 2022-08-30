@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
-import BlogList from './components/BlogList/BlogList'
+import Home from './pages/Home'
 
 const App = () => {
   return (
-    <div className='app-container'>
-      <Navbar />
-      <BlogList />
-    </div>
+    <>
+      <Navbar />  
+    <Home />
+    </>
   )
 }
 

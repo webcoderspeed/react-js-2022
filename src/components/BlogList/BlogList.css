@@ -1,71 +1,95 @@
+
 .blog-card {
-  width: 30rem;
- border-radius:1rem;
- background-color: white;
+  display: flex;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-in-out all;
 }
 
-.blog-card:hover{
+.blog-card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  background-color: hsla(200, 95%, 14%, 1);
 }
 
-
 .blog-img {
-  height: 20rem;
-  width: 100%;
- border-radius:1rem 1rem 0 0;
+  width: 20rem;
 }
 
 .blog-card-body {
   padding: 1rem;
 }
 
-.blog-card-body h3, .blog-card-body p {
-  color: rgb(151, 142, 142);
+.blog-card-body h3,
+.blog-card-body p {
   margin: 0;
   line-height: 1.9rem;
 }
 
+.blog-card:hover .blog-card-body h3,
+.blog-card:hover p {
+  color: rgba(196, 196, 196, 0.8);
+}
+
 .blog-card-body h1 {
   font-size: 1.5rem;
+  color: hsla(137, 85%, 34%, 1);
 }
 
 .blog-card-body p {
   font-size: 1.2rem;
+  padding: 0.5rem 0rem;
 }
 
-.blog-author-section  {
+.blog-card:hover .blog-author-section {
+  border-top: 0.1rem solid hsla(137, 85%, 34%, 1);
+}
+
+.blog-author-section {
   border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
-  margin:1rem 0;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.blog-author-info {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
- border-radius: 0 0 1rem 1rem;
 }
 
-.blog-author-section img {
-  height: 4rem ;
+.blog-author-info img {
+  height: 4rem;
   width: 4rem;
   border-radius: 50%;
 }
 
-.blog-author-section div {
+.blog-author-info div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.blog-author-section  h5, .blog-author-section  p {
+.blog-author-section h5,
+.blog-author-section p {
   margin: 0;
 }
 
+.blog-cta {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
 
+.blog-card:hover .blog-cta {
+  background-color: hsla(137, 85%, 34%, 1);
+  color: hsla(200, 95%, 14%, 1);
+}
 
-
-
-
-
-
-
+.blog-card:hover .blog-author-section h5 {
+  color: hsla(137, 85%, 34%, 1);
+}
