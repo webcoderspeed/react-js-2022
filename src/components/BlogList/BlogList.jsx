@@ -1,9 +1,10 @@
 import React from 'react';
 import './BlogList.css'
 
-const BlogList = ({blogs}) => {
+const BlogList = ({blogs, title}) => {
   return (
     <>
+    <h1>{title}</h1>
       {
         blogs && blogs.length ? (
           <>
@@ -43,7 +44,7 @@ const BlogList = ({blogs}) => {
               })
             }
           </>
-        ) : <h1>No blogs exits</h1>
+        ) : <h1>No blogs exists</h1>
       }
     </>
   );

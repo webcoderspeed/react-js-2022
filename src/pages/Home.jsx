@@ -48,6 +48,11 @@ const Home = () => {
   return <section className='home-container'>
     <BlogList 
       blogs={blogs}
+      title="All Blogs"
+    />
+    <BlogList 
+      blogs={blogs.filter(blog => blog.author.name === "Shai Almog")}
+      title="Shai Almog Blogs"
     />
   </section>;
 };
