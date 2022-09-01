@@ -1,7 +1,15 @@
 import React from 'react';
 import './BlogList.css'
 
-const BlogList = ({blogs, title}) => {
+const BlogList = ({ blogs, title, setBlogs }) => {
+
+  const handleDelete = (id) => {
+    console.log(`Blog Id - ${id}`);
+    const newBlogs = blogs.filter(blog => blog.id !== id)
+    setBlogs(newBlogs);
+  }
+
+
   return (
     <>
     <h1>{title}</h1>
@@ -37,6 +45,9 @@ const BlogList = ({blogs, title}) => {
                         </div>
 
                         <button className='blog-cta'>Read more</button>
+                        <button className='blog-cta'
+                          onClick={() => handleDelete(blog.id)}
+                        >Delete</button>
                       </div>
                     </div>
                   </article>
