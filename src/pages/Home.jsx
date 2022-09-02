@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css'
 import BlogList from '../components/BlogList/BlogList'
 
@@ -43,6 +43,10 @@ const Home = () => {
     },
   ]
 )
+
+  useEffect(() => {
+    console.log("useEffect run")
+  })
 
 
 

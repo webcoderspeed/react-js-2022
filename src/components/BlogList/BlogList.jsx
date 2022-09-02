@@ -9,7 +9,6 @@ const BlogList = ({ blogs, title, setBlogs }) => {
     setBlogs(newBlogs);
   }
 
-
   return (
     <>
     <h1>{title}</h1>
