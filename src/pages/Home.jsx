@@ -1,29 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import BlogList from '../components/BlogList/BlogList';
+import useFetch from '../hooks/useFetch';
 
 const Home = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch('http://localhost:8000/blogs')
-      .then((res) => {
-
-        if(!res.ok) {
-          throw Error('Could not fetch the data for that resource');
-        }
-
-        return res.json();
-      })
-      .then((data) => {
-        setBlogs(data);
-        setLoading(false);
-        setError(null)
-      })
-      .catch((error) => setError(error.message));
-  }, []);
+  const { loading, error, data, } = useFetch('http://localhost:8000/blogs');
 
   return (
     <section className='home-container'>
@@ -31,7 +12,7 @@ const Home = () => {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <BlogList blogs={blogs} title='All Blogs' setBlogs={setBlogs} />
+        <BlogList blogs={data} title='All Blogs' />
       )}
     </section>
   );

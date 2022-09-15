@@ -1,12 +1,9 @@
 import React from 'react';
 import './BlogList.css';
 
-const BlogList = ({ blogs, title, setBlogs }) => {
-  const handleDelete = (id) => {
-    console.log(`Blog Id - ${id}`);
-    const newBlogs = blogs.filter((blog) => blog.id !== id);
-    setBlogs(newBlogs);
-  };
+const BlogList = ({ blogs, title }) => {
+
+  const handleDelete = (id) => {}
 
   return (
     <>
