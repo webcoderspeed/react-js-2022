@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BlogList.css';
 
 const BlogList = ({ blogs, title }) => {
@@ -12,32 +13,34 @@ const BlogList = ({ blogs, title }) => {
         <>
           {blogs.map((blog) => {
             return (
-              <article className='blog-card' key={blog.id}>
-                <img src={blog.image} alt={blog.title} className='blog-img' />
+             <Link to={`/blogs/${blog.id}`}>
+                <article className='blog-card' key={blog.id}>
+                  <img src={blog.image} alt={blog.title} className='blog-img' />
 
-                <div className='blog-card-body'>
-                  <h3>{blog.category}</h3>
-                  <h1>{blog.title}</h1>
-                  <p>{blog.body.substring(0, 200) + '...'}</p>
-                  <div className='blog-author-section'>
-                    <div className='blog-author-info'>
-                      <img src={blog.author.avatar} alt='' />
-                      <div>
-                        <h5>{blog.author.name}</h5>
-                        <p>{blog.createdAt}</p>
+                  <div className='blog-card-body'>
+                    <h3>{blog.category}</h3>
+                    <h1>{blog.title}</h1>
+                    <p>{blog.body.substring(0, 200) + '...'}</p>
+                    <div className='blog-author-section'>
+                      <div className='blog-author-info'>
+                        <img src={blog.author.avatar} alt='' />
+                        <div>
+                          <h5>{blog.author.name}</h5>
+                          <p>{blog.createdAt}</p>
+                        </div>
                       </div>
-                    </div>
 
-                    <button className='blog-cta'>Read more</button>
-                    <button
-                      className='blog-cta'
-                      onClick={() => handleDelete(blog.id)}
-                    >
-                      Delete
-                    </button>
+                      <button className='blog-cta'>Read more</button>
+                      <button
+                        className='blog-cta'
+                        onClick={() => handleDelete(blog.id)}
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+             </Link>
             );
           })}
         </>
